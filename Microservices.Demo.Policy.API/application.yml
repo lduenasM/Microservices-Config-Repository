@@ -17,4 +17,4 @@ RabbitMQSettings:
     AutomaticRecovery: true
     TopologyRecovery: true
 Testing:
-    Test:nombreprueba
+    Test:nombreprueba1
