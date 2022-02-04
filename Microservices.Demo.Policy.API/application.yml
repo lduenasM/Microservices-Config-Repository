@@ -16,3 +16,5 @@ RabbitMQSettings:
     AutoCloseConnection: true
     AutomaticRecovery: true
     TopologyRecovery: true
+Testing:
+    Test:nombreprueba
