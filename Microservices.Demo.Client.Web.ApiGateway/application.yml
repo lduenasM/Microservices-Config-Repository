@@ -62,6 +62,38 @@ Routes:
         RouteClaimsRequirement:
             userType: SALESMAN      
         DangerousAcceptAnyServerCertificateValidator: true
+    -    
+        DownstreamPathTemplate: /api/Reports/{everything}
+        DownstreamScheme: http
+        UpstreamPathTemplate: /api/Reports/{everything}
+        ServiceName: Microservices.Demo.Report.API
+        UpstreamHttpMethod: 
+            - Get
+        FileCacheOptions: 
+            TtlSeconds: 15
+        AuthenticationOptions:
+            AuthenticationProviderKey: ApiSecurityAuthenticationScheme
+#            AllowedScopes:
+#                -
+        RouteClaimsRequirement:
+            userType: SALESMAN      
+        DangerousAcceptAnyServerCertificateValidator: true
+    -
+        DownstreamPathTemplate: /api/Reports
+        DownstreamScheme: http
+        UpstreamPathTemplate: /api/Reports
+        ServiceName: Microservices.Demo.Report.API
+        UpstreamHttpMethod:
+            - Get
+        FileCacheOptions: 
+            TtlSeconds: 15
+        AuthenticationOptions:
+            AuthenticationProviderKey: ApiSecurityAuthenticationScheme
+ #           AllowedScopes:
+ #               -      
+        RouteClaimsRequirement:
+            userType: SALESMAN      
+        DangerousAcceptAnyServerCertificateValidator: true
     -
         DownstreamPathTemplate: /api/Offers
         DownstreamScheme: http
